@@ -20,7 +20,7 @@ function unsplashCall(){
     
 }
 
-function colorAPICall(response) {
+function colorAPICall() {
     let query = $("#hex-search").val();
     let colorURL = `https://www.thecolorapi.com/scheme?hex=${query}&mode=complement&count=4`;
     $.ajax({
@@ -28,6 +28,7 @@ function colorAPICall(response) {
         method: "GET"
     }).then(function (response){
         console.log(response);
+        renderColors(response);
     });
 }
 
@@ -36,6 +37,9 @@ function colorAPICall(response) {
 function renderImages(response) {
     // for each image, inject image to DOM
     let imgArray = response.results;
+
+    $("#image-panel").empty();
+
     imgArray.forEach(function(img) {
         let imgSrc = img.urls.thumb;
         let altDes = img.alt_description;
@@ -51,6 +55,32 @@ function renderImages(response) {
          
     });
     
+}
+
+function renderColors(response) {
+    // for each color, inject color to DOM
+    let colorArray = response.colors;
+
+    $("#color-themes").empty();
+
+    colorArray.forEach(function(color) {
+        let colorSrc = color.hex.value;
+        console.log(colorSrc);
+
+        let colors = $("<div>", {
+            "class" : "color",
+            "width" : "200px",
+            "height" : "100px",
+            "background-color" : colorSrc,
+            "text" : colorSrc
+         }).css({"background-color" : colorSrc, "color" : "white"}).appendTo("#color-themes");
+         
+        // $('.color').css({"background-color" : colorSrc});
+         
+         // colors.appendTo("#color-themes");
+         
+    });
+
 }
 
 

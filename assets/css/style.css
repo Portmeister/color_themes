@@ -1,15 +1,23 @@
-/* :root {
-    font-size: 1rem;
-}
-*/
-
-body {
+html {
     background-color: lightgray;
-    height: 100vh;
 }
 
 header {
     font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    background-color: black;
+    width: 100vw;
+}
+
+.search {
+    display: flex;
+}
+#search, #hex-search {
+    height: 3em;
+}
+
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 500;
@@ -31,5 +39,4 @@ header {
     color: #cfffe5;
 
 }
-
 

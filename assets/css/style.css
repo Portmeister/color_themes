@@ -1,16 +1,35 @@
-:root {
+/* :root {
     font-size: 1rem;
 }
+*/
 
 body {
-    background-color: darkgray;
+    background-color: lightgray;
     height: 100vh;
 }
 
 header {
-    font-size: 2rem;
-    font-weight: 800;
-    color: white;
-    background-color: black;
-    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color:#cfffe5;
+    padding-top: 25px;
+    letter-spacing: 3px;
+    
 }
+
+.hero-element {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 75px;
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 2px 2px #A9A9A9;
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    color: #cfffe5;
+
+}
+
+

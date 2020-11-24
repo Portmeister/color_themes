@@ -8,7 +8,7 @@ let unsplashAPIKey = 'ZF6OdF1OqUv5GT4EPQ1QiuY4gaFm_c9O8ip6ZREUNRg';
 // Make API queries
 function unsplashCall(){
     let query = $("#search").val();
-    let unsplashURL = `https://api.unsplash.com/search/photos?query=${query}&client_id=${unsplashAPIKey}&per_page=10`;
+    let unsplashURL = `https://api.unsplash.com/search/photos?query=${query}&client_id=${unsplashAPIKey}&per_page=6`;
     $.ajax({
         url: unsplashURL,
         method: "GET"
@@ -41,16 +41,16 @@ function renderImages(response) {
     $("#image-panel").empty();
 
     imgArray.forEach(function(img) {
-        let imgSrc = img.urls.thumb;
+        let imgSrc = img.urls.regular;
         let altDes = img.alt_description;
         console.log(imgSrc);
 
         let photo = $("<img/>", {
-            "class" : "image",
+            "class" : "img-fluid",
             "src" : imgSrc,
             "alt" : altDes,
             // "width" : "200px",
-            // "height" : "200px"
+            "height" : "500px"
          }).appendTo("#image-panel");
          
     });

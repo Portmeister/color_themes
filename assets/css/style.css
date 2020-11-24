@@ -1,14 +1,6 @@
-/* :root {
-    font-size: 1rem;
-} */
 html {
-    background-color: darkgray;
+    background-color: lightgray;
 }
-
-/* body {
-    background-color: darkgray;
-    height: 100vh;
-} */
 
 header {
     font-family: 'Poppins', sans-serif;
@@ -25,3 +17,26 @@ header {
 #search, #hex-search {
     height: 3em;
 }
+
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color:#cfffe5;
+    padding-top: 25px;
+    letter-spacing: 3px;
+    
+}
+
+.hero-element {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 75px;
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 2px 2px #A9A9A9;
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    color: #cfffe5;
+
+}
+

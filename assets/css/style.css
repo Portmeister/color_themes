@@ -1,0 +1,16 @@
+:root {
+    font-size: 1rem;
+}
+
+body {
+    background-color: darkgray;
+    height: 100vh;
+}
+
+header {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    background-color: black;
+    width: 100vw;
+}

@@ -69,7 +69,7 @@ function renderColors(response) {
         console.log(colorSrc);
 
         let colors = $("<div>", {
-            "class" : "color",
+            "class" : "color column is-2",
             "width" : "200px",
             "height" : "100px",
             "background-color" : colorSrc,

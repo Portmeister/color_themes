@@ -1,23 +1,46 @@
-:root {
-    font-size: 1rem;
-}
-
-body {
-    background-color: darkgray;
-    height: 100vh;
+html {
+    background-color: lightgray;
 }
 
 header {
-    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
     font-weight: 800;
     color: white;
     background-color: black;
     width: 100vw;
 }
 
+.search {
+    display: flex;
+}
+#search, #hex-search {
+    height: 3em;
+}
+
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color:#cfffe5;
+    padding-top: 25px;
+    letter-spacing: 3px;
+    
+}
+
+.hero-element {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 75px;
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 2px 2px #A9A9A9;
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    color: #cfffe5;
+
+}
+
 /* image panel fill in */
-
-
 #image-panel {
         /* Prevent vertical gaps */
     line-height: 0;

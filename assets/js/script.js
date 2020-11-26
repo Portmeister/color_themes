@@ -49,8 +49,9 @@ function renderImages(response) {
             "class" : "img-fluid flex-wrap",
             "src" : imgSrc,
             "alt" : altDes,
-            //"width" : "400px",
-            //"height" : "400px"
+            "width" : "400px",
+            "height" : "400px",
+
          }).appendTo("#image-panel");
          
     });

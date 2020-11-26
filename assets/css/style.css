@@ -15,6 +15,9 @@ header {
     width: 100vw;
 }
 
+/* image panel fill in */
+
+
 #image-panel {
         /* Prevent vertical gaps */
     line-height: 0;
@@ -25,7 +28,6 @@ header {
     -moz-column-gap:      0px;
     column-count:         3;
     column-gap:           0px;  
-      
       
 
     /* Just in case there are inline attributes */
@@ -54,4 +56,9 @@ header {
     -webkit-column-count: 1;
     column-count:         1;
     }
+  }
+
+  img {
+      object-fit: cover;
+
   }

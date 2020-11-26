@@ -16,15 +16,24 @@ header {
 }
 #search, #hex-search {
     height: 3em;
-}
-
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 500;
-    color:#cfffe5;
+    color:black;
     padding-top: 25px;
     letter-spacing: 3px;
     
+}
+
+
+#search-btn, #submit-btn {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-left: 0.5rem;
+}
+
+#color-search {
+    margin-top: 325px;
 }
 
 .hero-element {
@@ -42,6 +51,7 @@ header {
 
 /* image panel fill in */
 #image-panel {
+    margin-left: 3vw;
         /* Prevent vertical gaps */
     line-height: 0;
          
@@ -57,6 +67,14 @@ header {
     width: 100%;
     height: 100%;
       
+}
+
+#color-themes {
+    margin-top: 2rem;
+}
+
+#linked-in {
+    margin-left: 2rem;
 }
 
 @media (max-width: 1200px) {

@@ -1,9 +1,14 @@
-// Global variables
+// Global variables, grab DOM elements
 let formEl = $("#search-btn")
 let colorSubmit = $("#submit-btn")
 let unsplashAPIKey = 'ZF6OdF1OqUv5GT4EPQ1QiuY4gaFm_c9O8ip6ZREUNRg';
+let palettes = JSON.parse(localStorage.getItem("palette")) || [];
+let dropdown = $('select');
+// let savedSearch = $('option');
 
-// Grab DOM elements
+$.each(palettes, function() {
+    dropdown.append($("<option />").val(this).text(this));
+});
 
 // Make API queries
 function unsplashCall(){
@@ -21,13 +26,17 @@ function unsplashCall(){
 }
 
 function colorAPICall() {
-    let query = $("#hex-search").val();
+    let query = String($("#hex-search").val()).toLowerCase();
     let colorURL = `https://www.thecolorapi.com/scheme?hex=${query}&mode=complement&count=4`;
     $.ajax({
         url: colorURL,
         method: "GET"
     }).then(function (response){
-        console.log(response);
+        
+        if (! palettes.includes(query)){
+            palettes.push(query);
+        }
+        
         renderColors(response);
     });
 }
@@ -68,6 +77,8 @@ function renderColors(response) {
         let colorSrc = color.hex.value;
         console.log(colorSrc);
 
+       
+
         let colors = $("<div>", {
             "class" : "color column is-2",
             "width" : "200px",
@@ -76,15 +87,28 @@ function renderColors(response) {
             "text" : colorSrc
          }).css({"background-color" : colorSrc, "color" : "white"}).appendTo("#color-themes");
          
-        // $('.color').css({"background-color" : colorSrc});
-         
-         // colors.appendTo("#color-themes");
-         
     });
 
+    localStorage.setItem("palette", JSON.stringify(palettes));
 }
 
 
 // Set Local Storage
 formEl.on('click', unsplashCall);
 colorSubmit.on('click', colorAPICall);
+savedSearch.on('click', function(){
+    console.log("I am triggering")
+    // let query = String($("option").val()).toLowerCase();
+    // let colorURL = `https://www.thecolorapi.com/scheme?hex=${query}&mode=complement&count=4`;
+    // $.ajax({
+    //     url: colorURL,
+    //     method: "GET"
+    // }).then(function (response){
+        
+    //     if (! palettes.includes(query)){
+    //         palettes.push(query);
+    //     }
+        
+    //     renderColors(response);
+    // });
+});

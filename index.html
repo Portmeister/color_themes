@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=202011161902">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,400;1,500&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,400;1,500&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Theme Designer</title>
 </head>
+
 <body>
     <header id="header" class="is-flex is-justify-content-center">
         <h1>
             Color Theme Designer
         </h1>
     </header>
+
+    <!-- <div class="columns is-desktop is-centered">
+        <div class="column is-half">
+          <p class="bd-notification is-primary">
+            <ul>
+                <li>Dream It.</li>
+                <li>Find It.</li>
+                <li>Build It.</li>
+            </ul>
+          </p>
+        </div>
+
+        <div class="column is-half">
+            <p class="bd-notification is-primary">
+              <code class="html">is-half</code><br>
+            </p>
+          </div>
+      </div>
+
+    <div class="columns is-desktop is-centered">
+        <div class="column">
+            
+        </div>
+        <div class="column">
+            <div class="search">
+                <input type="text" id="search" placeholder="Search Image">
+                <a class="button is-link" id="search-btn">
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
     <div class="hero-element">
         <ul>
             <li>Dream It.</li>
@@ -25,22 +72,25 @@
             <li>Build It.</li>
         </ul>
     </div>
-    
+
 
     <main class="row">
         <div class="column is-full">
             <div class="search column is-one-third is-offset-one-third">
                 <input type="text" id="search" class="column is-10" placeholder="Search Image">
                 <a class="button is-link" id="search-btn">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
                     </svg>
                 </a>
             </div>
-        
+
             <div id="image-panel" class="is-flexwrap-wrap">
-        
+
             </div>
         </div>
 
@@ -69,47 +119,57 @@
                 font-weight : bold;
                 border-top-right-radius : 5px;
                 border-top-left-radius : 5px;">
-                <h3 style="color:#FFFFFF;">HTML Color Picker</h3>
+                    <h3 style="color:#FFFFFF;">HTML Color Picker</h3>
                 </div>
                 <script src="https://ww.colorcodehex.com/color-picker/abcdef.html" type="text/javascript"></script>
-            </div> 
-            <!-- End of Color Picker Script --> 
+            </div>
+            <!-- End of Color Picker Script -->
         </div>
 
         <div id="color-search" class="column is-full">
             <div class="search column is-one-third is-offset-one-third">
                 <input type="text" id="hex-search" class="column is-10" placeholder="Search by Hex Value">
                 <a class="button is-link" id="submit-btn">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
                     </svg>
                 </a>
             </div>
-            
+
             <div id="color-themes" class="row is-flex is-justify-content-center">
-                
+
             </div>
-        </div>    
+
+            <div class="palette-select row is-flex is-justify-content-center">
+
+                <select>
+
+                </select>
+
+            </div>
+        </div>
     </main>
-   <footer class="container row">
-       <section id="footer">
+    <footer class="container row">
+        <section id="footer">
             <div class="column">
-              <div class="social-icon is-flex is-justify-content-center">
-                <div class="social-item">
-                  <a href="https://www.a-hinton.github.io"><img src="./assets/images/icons8-github-48.png"/></a>
+                <div class="social-icon is-flex is-justify-content-center">
+                    <div class="social-item">
+                        <a href="https://www.a-hinton.github.io"><img src="./assets/images/icons8-github-48.png" /></a>
+                    </div>
+                    <div id="linked-in" class="social-item">
+                        <a href="https://www.linkedin.com"><img src="./assets/images/icons8-linkedin-48.png" /></a>
+                    </div>
                 </div>
-                <div id="linked-in" class="social-item">
-                  <a href="https://www.linkedin.com"><img src="./assets/images/icons8-linkedin-48.png"/></a>
-                </div>
-              </div>
             </div>
         </section>
-   </footer>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
+    </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
     </script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

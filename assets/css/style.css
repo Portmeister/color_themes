@@ -1,5 +1,5 @@
 html {
-    background-color: lightgray;
+    background-color: #636363;
 }
 
 header {
@@ -9,31 +9,6 @@ header {
     color: white;
     background-color: black;
     width: 100vw;
-}
-
-.search {
-    display: flex;
-}
-#search, #hex-search {
-    height: 3em;
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 500;
-    color:black;
-    padding-top: 25px;
-    letter-spacing: 3px;
-    
-}
-
-
-#search-btn, #submit-btn {
-    height: 4.5rem;
-    width: 4.5rem;
-    margin-left: 0.5rem;
-}
-
-#color-search {
-    margin-top: 325px;
 }
 
 .hero-element {
@@ -48,6 +23,36 @@ header {
     color: #cfffe5;
 
 }
+
+/* Styling for search elements */
+.search {
+    display: flex;
+}
+
+.search-btn {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-left: 0.5rem;
+}
+
+#search, #hex-search, #dropdown{
+    height: 3em;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color:black;
+    letter-spacing: 3px;
+    
+}
+
+#past-search, #search, #hex-search {
+    padding-top: 25px;
+}
+
+#color-search {
+    margin-top: 325px;
+}
+/* End styling for search elements */
 
 /* image panel fill in */
 #image-panel {
@@ -69,14 +74,25 @@ header {
       
 }
 
+.description {
+    text-align: center;
+    color: white;
+}
+
+/* Styling for color scheme display section */
 #color-themes {
     margin-top: 2rem;
 }
+/* End styling for color scheme display section */
 
+
+/* Footer styling */
 #linked-in {
     margin-left: 2rem;
 }
+/* End footer styling */
 
+/* Responsive media queries */
 @media (max-width: 1200px) {
     #image-panel {
     -moz-column-count:    3;

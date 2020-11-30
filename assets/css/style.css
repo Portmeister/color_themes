@@ -1,110 +1,9 @@
-/* Styling for search elements */
-.search {
-    display: flex;
-}
-
-.search-btn {
-    height: 4.5rem;
-    width: 4.5rem;
-    margin-left: 0.5rem;
-}
-
-#search, #hex-search, #dropdown{
-    height: 3em;
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 500;
-    color:black;
-    letter-spacing: 3px;
-    
-}
-
-#past-search, #search, #hex-search {
-    padding-top: 25px;
-}
-
-#color-search {
-    margin-top: 325px;
-}
-/* End styling for search elements */
-
-/* image panel fill in */
-#image-panel {
-    margin-left: 3vw;
-        /* Prevent vertical gaps */
-    line-height: 0;
-         
-    -webkit-column-count: 3;
-    -webkit-column-gap:   0px;
-    -moz-column-count:    3;
-    -moz-column-gap:      0px;
-    column-count:         3;
-    column-gap:           0px;  
-      
-
-    /* Just in case there are inline attributes */
+/* Banner styling */
+#container{
     width: 100%;
     height: 100%;
-      
-}
-
-.description {
-    text-align: center;
-    color: white;
-}
-
-/* Styling for color scheme display section */
-#color-themes {
-    margin-top: 2rem;
-}
-/* End styling for color scheme display section */
-
-
-/* Footer styling */
-#linked-in {
-    margin-left: 2rem;
-}
-/* End footer styling */
-
-/* Responsive media queries */
-@media (max-width: 1200px) {
-    #image-panel {
-    -moz-column-count:    3;
-    -webkit-column-count: 3;
-    column-count:         3;
-    }
-  }
-  @media (max-width: 1000px) {
-    #image-panel {
-    -moz-column-count:    2;
-    -webkit-column-count: 2;
-    column-count:         2;
-    }
-  }
-  @media (max-width: 800px) {
-    #image-panel {
-    -moz-column-count:    1;
-    -webkit-column-count: 1;
-    column-count:         1;
-    }
-  }
-
-  img {
-      object-fit: cover;
-
-  }
-
-
-
-
-
-html,body{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    /* overflow: hidden; */
-    background: rgb(42,248,235);
+    position: relative;
+    overflow: hidden;
 }
 
 #top{
@@ -137,19 +36,26 @@ html,body{
     letter-spacing: 2px;
 }
 
-#container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
 #box{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 20%;
     left: 4%;
+}
+
+#box-backup {
+    padding-top: 10vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 75px;
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 2px 2px #929292;
+    display: flex;
+    justify-content: center;
+    word-wrap: normal;
+    color: #cfffe5;
+
 }
 
 #box1,#box2,#box3,#box4,#box5,#box6{
@@ -212,6 +118,110 @@ html,body{
     left: -750px;
     animation: anim2 1s forwards;
 }
+/* End banner styling */
+
+
+/* Styling for search elements */
+.search {
+    display: flex;
+}
+
+.search-btn {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-left: 0.5rem;
+}
+
+#search, #hex-search, #dropdown{
+    height: 3em;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color:black;
+    letter-spacing: 3px;
+    
+}
+
+#past-search, #search-container, #hex-search-container, #color-widget {
+    margin-top: 15px;
+}
+
+#color-widget {
+    margin-bottom: 350px;
+}
+
+.panel {
+    min-height: 425px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#img-color, #images, #colors {
+    margin-bottom: 2%;
+}
+
+/* End styling for search elements */
+
+/* Image panel styling */
+/* image panel fill in */
+#image-panel {
+    margin-left: 3vw;
+        /* Prevent vertical gaps */
+    line-height: 0;
+         
+    -webkit-column-count: 3;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    3;
+    -moz-column-gap:      0px;
+    column-count:         3;
+    column-gap:           0px;  
+      
+
+    /* Just in case there are inline attributes */
+    width: 100%;
+    height: 100%;
+      
+}
+/* End image panel styling */
+
+.description {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Styling for color scheme display section */
+#color-themes {
+    margin-top: 2rem;
+}
+/* End styling for color scheme display section */
+
+
+/* Footer styling */
+footer {
+    padding-top: 2rem;
+    width: 100vw;
+    background-color: rgba(66, 66, 66, 0.25);
+}
+
+#linked-in {
+    margin-left: 2rem;
+}
+/* End footer styling */
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow: hidden; */
+    background: rgb(42,248,235);
+}
+
+.panel {
+    background-color: rgba(66, 66, 66, 0.25);
+}
+
 
 @keyframes anim{
     from{
@@ -235,3 +245,37 @@ html,body{
     color: black;
     opacity: 0.1;
 }
+
+/* Responsive media queries */
+@media (min-width: 1521px){
+    #box-backup {
+        display: none;
+    }
+}
+@media (max-width: 1520px) {
+    #box {
+        display: none;
+    }
+    #box-backup {
+        display: flex;
+        height: 95%;
+    }
+    #container {
+        height: 50px;
+    }
+}
+
+  @media (max-width: 450px) {
+    #box-backup {
+        font-size: 50px;
+    }
+
+    #images {
+        padding-top: 50vh;
+    }
+  }
+
+  img {
+      object-fit: cover;
+
+  }

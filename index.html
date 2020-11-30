@@ -66,80 +66,96 @@
         </div>
     </div>
 
+    <div id="box-backup">
+        <ul id="backup-motto">
+            <li>+DREAM IT</li>
+            <li>+FIND IT</li>
+            <li>+BUILD IT</li>
+        </ul>
+    </div>
     
-    <main class="row">
-        <div class="column is-full">
-            <p class="description">Search for images to inspire your designs.</p>
-
-            <div class="search column is-one-third is-offset-one-third">
-                <input type="text" id="search" class="column is-10" placeholder="Search Image">
-                <button class="test button is-link is-rounded search-btn"><i class="fa fa-search" id="search-btn"></i></button>
-            </div>
-            <!-- images rendered here from Unsplash API call -->
-            <div id="image-panel" class="is-flexwrap-wrap">
-            </div>
-        </div> 
-
-        <div id="color-picker" class="column is-full">
-            <p class="description">Choose a base color for your color scheme.</p>
-            <!-- Color Picker Script - ColorCodeHex.COM -->
-             <div class="column is-2 is-offset-5" style="font-family : Arial, Helvetica, sans-serif;
-                border : solid 1px #4a4a4a;
-                position : absolute;
-                width : 240px;
-                height : 330px;
-                background : #d6d6d6;
-                -moz-box-shadow : 0 0 6px rgba(0,0,0,.25);
-                -webkit-box-shadow : 0 0 6px rgba(0,0,0,.25);
-                box-shadow:0 0 6px rgba(0,0,0,.25);
-                -moz-border-radius : 5px;
-                -webkit-border-radius : 5px;
-                border-radius : 5px;">
-                <div style="background-color : #4a4a4a;
-                position : absolute;
-                top : 0px;
-                left : 0px; 
-                width : 100%; 
-                height : 22px;
-                text-align : center;
-                padding-top : 2px;
-                font-weight : bold;
-                border-top-right-radius : 5px;
-                border-top-left-radius : 5px;">
-                    <h3 style="color:#FFFFFF;">HTML Color Picker</h3>
-                </div> 
-
-                 <script src="https://ww.colorcodehex.com/color-picker/abcdef.html" type="text/javascript"></script>
-            </div> 
-            <!-- End of Color Picker Script -->
-         </div>
-
-         <div id="color-search" class="column is-full">
-            <p class="description">Input the hex value of your chosen color to generate a complementary color scheme</p>
-
-            <div class="search column is-one-third is-offset-one-third">
-                <input type="text" id="hex-search" class="column is-10" placeholder="Search by Hex Value">
-                <button class="test button is-link is-rounded search-btn"><i class="fa fa-search" id="submit-btn"></i></button>
-            </div>
-
-            <div id="color-themes" class="row is-flex is-justify-content-center">
-                <!-- color swatches rendered here with js -->
-            </div>
-
-            <div id="retrieve-searches">
-                <p class="description">Choose a saved search to reload a previous color scheme.</p>
-
-                <div class="palette-select row is-flex is-justify-content-center" id="past-search">
-                    <select id="dropdown">
-                        <!-- dropdown options rendered here with js -->
-                    </select>
-                    <button class="test button is-link is-rounded search-btn"><i class="fa fa-search" id="saved-search"></i></button>   
+    <main class="row is-justify-content-center">
+        <div class="columns panel" id="img-color">
+            <div class="column">
+                <p class="description">Search for images to inspire your designs</p>
+    
+                <div class="search column" id="search-container">
+                    <input type="text" id="search" class="column is-9 is-offset-1" placeholder="Search Image">
+                    <button class="button is-link is-rounded search-btn" id="search-btn"><i class="fa fa-search"></i></button>
                 </div>
             </div>
-            
+
+            <div id="color-picker" class="column is-one-half">
+                <p class="description">Choose a base color for your color scheme</p>
+                <!-- Color Picker Script - ColorCodeHex.COM -->
+                 <div class="column is-offset-2" id="color-widget" style="font-family : Arial, Helvetica, sans-serif;
+                    border : solid 1px #4a4a4a;
+                    position : absolute;
+                    width : 240px;
+                    height : 330px;
+                    background : #d6d6d6;
+                    -moz-box-shadow : 0 0 6px rgba(0,0,0,.25);
+                    -webkit-box-shadow : 0 0 6px rgba(0,0,0,.25);
+                    box-shadow:0 0 6px rgba(0,0,0,.25);
+                    -moz-border-radius : 5px;
+                    -webkit-border-radius : 5px;
+                    border-radius : 5px;">
+                    <div style="background-color : #4a4a4a;
+                    position : absolute;
+                    top : 0px;
+                    left : 0px; 
+                    width : 100%; 
+                    height : 22px;
+                    text-align : center;
+                    padding-top : 2px;
+                    font-weight : bold;
+                    border-top-right-radius : 5px;
+                    border-top-left-radius : 5px;">
+                        <h3 style="color:#FFFFFF;">HTML Color Picker</h3>
+                    </div> 
+    
+                     <script src="https://ww.colorcodehex.com/color-picker/abcdef.html" type="text/javascript"></script>
+                </div> 
+                <!-- End of Color Picker Script -->
+             </div>
+        </div>
+        
+        <div class="columns panel" id="images">
+            <div id="image-panel" class="is-flexwrap-wrap">
+                <!-- images rendered here from Unsplash API call -->
+            </div>
+        </div>
+        
+        <div class="columns panel is-vcentered" id="colors">
+            <div id="color-search" class="column">
+                <p class="description">Input the hex value of your chosen color to generate a complementary color scheme</p>
+    
+                <div class="search column" id="hex-search-container">
+                    <input type="text" id="hex-search" class="column is-9 is-offset-1" placeholder="Search by Hex Value">
+                    <button class="button is-link is-rounded search-btn" id="submit-btn"><i class="fa fa-search"></i></button>
+                </div>
+    
+                <div id="color-themes" class="row is-flex is-justify-content-center">
+                    <!-- color swatches rendered here with js -->
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="retrieve-searches" class="column">
+                    <p class="description">Choose a saved search to reload a previous color scheme</p>
+    
+                    <div class="palette-select row is-flex is-justify-content-center" id="past-search">
+                        <select id="dropdown">
+                            <!-- dropdown options rendered here with js -->
+                        </select>
+                        <button class="button is-link is-rounded search-btn" id="saved-search"><i class="fa fa-search"></i></button>   
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="container row">
+
+    <footer class="container">
         <section id="footer">
             <div class="column">
                 <div class="social-icon is-flex is-justify-content-center">
@@ -152,7 +168,7 @@
                 </div>
             </div>
         </section>
-    </footer> -->
+    </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
     </script>
     <script src="assets/js/script.js"></script>

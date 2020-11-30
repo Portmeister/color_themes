@@ -72,7 +72,7 @@ function renderImages(response) {
         console.log(imgSrc);
 
         let photo = $("<img/>", {
-            "class" : "img-fluid flex-wrap",
+            "class" : "column is-one-third",
             "src" : imgSrc,
             "alt" : altDes,
             "width" : "400px",

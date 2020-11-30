@@ -4,11 +4,14 @@ let colorSubmit = $("#submit-btn")
 let unsplashAPIKey = 'ZF6OdF1OqUv5GT4EPQ1QiuY4gaFm_c9O8ip6ZREUNRg';
 let palettes = JSON.parse(localStorage.getItem("palette")) || [];
 let dropdown = $('select');
-// let savedSearch = $('option');
+let savedSearch = $('#saved-search');
 
-$.each(palettes, function() {
-    dropdown.append($("<option />").val(this).text(this));
-});
+// iterates through past queries in saved storage and appends them as options in the select menu
+function loadDropdown(){
+    $.each(palettes, function() {
+        dropdown.append($("<option />").val(this).text(this));
+    });
+}
 
 // Make API queries
 function unsplashCall(){
@@ -38,11 +41,25 @@ function colorAPICall() {
         }
         
         renderColors(response);
+        // empty dropdown menu of previously loaded content
+        $("select").empty();
+        // Load all entries from local storage, inlcuding new search term
+        loadDropdown();
+    });
+}
+
+function dropdownSelect() {
+    let output = dropdown.val();
+    let colorURL = `https://www.thecolorapi.com/scheme?hex=${output}&mode=complement&count=4`;
+    $.ajax({
+        url: colorURL,
+        method: "GET"
+    }).then(function (response){
+        renderColors(response);
     });
 }
 
 // JS Rendering functions
-
 function renderImages(response) {
     // for each image, inject image to DOM
     let imgArray = response.results;
@@ -96,19 +113,7 @@ function renderColors(response) {
 // Set Local Storage
 formEl.on('click', unsplashCall);
 colorSubmit.on('click', colorAPICall);
-savedSearch.on('click', function(){
-    console.log("I am triggering")
-    // let query = String($("option").val()).toLowerCase();
-    // let colorURL = `https://www.thecolorapi.com/scheme?hex=${query}&mode=complement&count=4`;
-    // $.ajax({
-    //     url: colorURL,
-    //     method: "GET"
-    // }).then(function (response){
-        
-    //     if (! palettes.includes(query)){
-    //         palettes.push(query);
-    //     }
-        
-    //     renderColors(response);
-    // });
-});
+savedSearch.on('click', dropdownSelect);
+
+// On first load on page, populate past searches dropdown with terms from local storage
+loadDropdown();

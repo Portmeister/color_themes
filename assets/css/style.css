@@ -1,29 +1,3 @@
-html {
-    background-color: #636363;
-}
-
-header {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    background-color: black;
-    width: 100vw;
-}
-
-.hero-element {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 75px;
-    font-weight: 500;
-    font-style: italic;
-    text-shadow: 2px 2px #A9A9A9;
-    display: flex;
-    justify-content: center;
-    margin: 100px;
-    color: #cfffe5;
-
-}
-
 /* Styling for search elements */
 .search {
     display: flex;
@@ -119,3 +93,145 @@ header {
       object-fit: cover;
 
   }
+
+
+
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow: hidden; */
+    background: rgb(42,248,235);
+}
+
+#top{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 80px;
+}
+
+#logo{
+    float: left;
+}
+
+#logo img{
+    width: 50px;
+}
+
+#menu{
+    float: right;
+}
+
+#menu ul{
+    list-style: none;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+#menu ul li{
+    display: inline-block;
+    margin-left: 100px;
+    letter-spacing: 2px;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+}
+
+#box1,#box2,#box3,#box4,#box5,#box6{
+    width: 750px;
+    height: 200px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11em;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#box1{
+    transform: skewY(-15deg);
+}
+
+#box2{
+    transform: skewY(15deg);
+    margin-left: -5px;
+}
+
+#box3{
+    margin-top: -50px;
+    transform: skewY(-15deg);
+}
+
+#box4{
+    margin-top: -50px;
+    transform: skewY(15deg);
+    margin-left: -4px;
+}
+
+#box5{
+    margin-top: -50px;
+    transform: skewY(-15deg);
+}
+
+#box6{
+    margin-top: -50px;
+    transform: skewY(15deg);
+    margin-left: -5px;
+}
+
+#text1,#text2,#text3,#text4,#text5,#text6{
+    width: 1200px;
+    height: 200px;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    transition: all .4s;
+}
+
+#text1,#text3,#text5{
+    left: 750px;
+    animation: anim 1s forwards 0.1s;
+}
+
+#text2,#text4,#text6{
+    color: black;
+    left: -750px;
+    animation: anim2 1s forwards;
+}
+
+@keyframes anim{
+    from{
+        left: 1200px;
+    }
+    to{
+        left: 0px;
+    }
+}
+
+@keyframes anim2{
+    from{
+        left: 1200px;
+    }
+    to{
+        left: -750px;
+    }
+}
+
+#text3,#text4,#text5,#text6{
+    color: black;
+    opacity: 0.1;
+}

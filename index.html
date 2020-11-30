@@ -28,21 +28,45 @@
 </head>
 
 <body>
-    <header id="header" class="is-flex is-justify-content-center">
-        <h1>
-            Color Theme Designer
-        </h1>
-    </header>
+    <div id="container">
+        <div id="top">
+            <div id="logo">
+                <img src="logo.png"/>
+            </div>
 
-    <div class="hero-element">
-        <ul>
-            <li>Dream It.</li>
-            <li>Find It.</li>
-            <li>Build It.</li>
-        </ul>
+            <div id="menu">
+                <ul>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="box">
+            <div id="box1">
+                <div id="text1">+DREAM IT</div>
+            </div>
+            <div id="box2">
+                <div id="text2">+DREAM IT</div>
+            </div>
+            <br>
+            <div id="box3">
+                <div id="text3">+FIND IT</div>
+            </div>
+            <div id="box4">
+                <div id="text4">+FIND IT</div>
+            </div>
+            <br>
+            <div id="box5">
+                <div id="text5">+BUILD IT</div>
+            </div>
+            <div id="box6">
+                <div id="text6">+BUILD IT</div>
+            </div>
+        </div>
     </div>
 
-
+    
     <main class="row">
         <div class="column is-full">
             <p class="description">Search for images to inspire your designs.</p>
@@ -51,16 +75,15 @@
                 <input type="text" id="search" class="column is-10" placeholder="Search Image">
                 <button class="test button is-link is-rounded search-btn"><i class="fa fa-search" id="search-btn"></i></button>
             </div>
-
+            <!-- images rendered here from Unsplash API call -->
             <div id="image-panel" class="is-flexwrap-wrap">
-                <!-- images rendered here from Unsplash API call -->
             </div>
-        </div>
+        </div> 
 
         <div id="color-picker" class="column is-full">
             <p class="description">Choose a base color for your color scheme.</p>
             <!-- Color Picker Script - ColorCodeHex.COM -->
-            <div class="column is-2 is-offset-5" style="font-family : Arial, Helvetica, sans-serif;
+             <div class="column is-2 is-offset-5" style="font-family : Arial, Helvetica, sans-serif;
                 border : solid 1px #4a4a4a;
                 position : absolute;
                 width : 240px;
@@ -84,14 +107,14 @@
                 border-top-right-radius : 5px;
                 border-top-left-radius : 5px;">
                     <h3 style="color:#FFFFFF;">HTML Color Picker</h3>
-                </div>
+                </div> 
 
-                <script src="https://ww.colorcodehex.com/color-picker/abcdef.html" type="text/javascript"></script>
-            </div>
+                 <script src="https://ww.colorcodehex.com/color-picker/abcdef.html" type="text/javascript"></script>
+            </div> 
             <!-- End of Color Picker Script -->
-        </div>
+         </div>
 
-        <div id="color-search" class="column is-full">
+         <div id="color-search" class="column is-full">
             <p class="description">Input the hex value of your chosen color to generate a complementary color scheme</p>
 
             <div class="search column is-one-third is-offset-one-third">
@@ -129,10 +152,9 @@
                 </div>
             </div>
         </section>
-    </footer>
+    </footer> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
     </script>
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>

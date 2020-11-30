@@ -4,6 +4,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    padding-bottom: 25px;
 }
 
 #top{
@@ -256,6 +257,11 @@ html,body{
     #box {
         display: none;
     }
+
+    #logo {
+        display: none;
+    }
+    
     #box-backup {
         display: flex;
         height: 95%;

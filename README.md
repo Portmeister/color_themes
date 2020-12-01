@@ -10,6 +10,12 @@ I want to generate a color palette from inspirational images I choose,
 So that I can put together complementary design themes for my projects.
 ```
 
+The following images demonstrate the application functionality:
+
+![color picker demo](./assets/images/Color_Picker_Landing.PNG)
+![color picker demo 1](./assets/images/Color_Picker_Page1.PNG)
+![color picker demo 2](./assets/images/Color_Picker_Page2.PNG)
+
 ## Deployment
 You are required to submit the following for review:
 - The URL of the deployed application: https://portmeister.github.io/color_themes/
